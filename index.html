@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        var pickupHolder = 'Pickup Date';
+        var returnHolder = 'Return Date';
+        var selectDTHolder = 'Select Date-Time';
+        var pickupTime = 'Pick-Up Time';
+        var returnTime = 'Return Time';
+        var decimalSep = ',';
+        var decimalNum = '0';
+    </script>
+    <script type="text/javascript" src="assets/js/daterangepicker.js"></script>
+    <script type="text/javascript" src="assets/js/stmdatetimepicker.js"></script>
+    <script src="https://kit.fontawesome.com/bf9fd72f31.js" crossorigin="anonymous"></script>
+    <title>Motors</title>
+</head>
+
+<body>
+
+    <!-- Header  -->
+    <header class="header-main-area">
+        <div class="container">
+            <div class="inner-header-area">
+                <div class="left-side-area-main">
+                    <a href="#" title="Logo">
+                        <img src="assets/images/logo.svg" alt="Logo" title="Logo" />
+                    </a>
+                </div>
+                <div class="right-side-area-main">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">HOME PAGE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">EXPLORE VEHICLES</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">CONTACT</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="login-and-register-btn">
+                                            <img src="assets/images/user.png" alt="img" title="img" width="20px" />
+                                            LOGIN or REGISTER
+                                        </a>
+                                    </li>
+                                    <button class="navbar-toggler close-btn-new" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <img src="./assets/images/close.png" />
+                                    </button>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <section class="first-section-main">
+        <div class="full-width-main">
+            <div class="left-side-area">
+                <div class="slick-slider">
+                    <div class="element element-1 first-background">
+                        <div class="heading-main">
+                            <h1>Enjoy <br />the Journey <br />with your family! </h1>
+                            <div class="sub-heading"> Motors Car Rental Template</div>
+                        </div>
+                    </div>
+                    <div class="element element-2 second-background">
+                        <div class="heading-main">
+                            <h1>Enjoy <br />the Journey <br />with your family! </h1>
+                            <div class="sub-heading"> Motors Car Rental Template</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <a href="#">
+                        <div class="btn-title">Rent Now</div>
+                        <div class="product-title">BMW 530i</div>
+                    </a>
+                </div>
+            </div>
+            <div class="right-side-area">
+                <div class="inner-find-new-car">
+                    <div class="find-title-main">Find your car</div>
+                    <div class="main-box-area">
+                        <div class="first-cols-main comman-cols">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="assets/images/location.png" width="15px" />
+                                    Recent Location
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="date-picker-main second-cols-main comman-cols">
+                            <div class="dateTimeRangeWrap"
+                                style="display: flex;flex-direction: row;flex-wrap: nowrap;width: 100%;position: absolute;">
+                                <div class="start-dt-wrap"
+                                    style="display: flex;flex-direction: row;flex-wrap: nowrap;align-items: center;justify-content: flex-start;position: relative;width: 50%;overflow: hidden;padding: 10px 10px 10px 20px;">
+                                    <i class="fa fa-calendar"></i>
+                                    <div id="pickup-date-holder" class="rent-date-text-holder"
+                                        style="display: block; font-size: 12px;  
+                                    font-weight: 700; white-space: normal; line-height: 15px; text-transform: uppercase; padding-right: 20px; padding-left: 5px; z-index: 0;">
+                                        Pickup Date</div>
+                                </div>
+                                <div class="end-dt-wrap"
+                                    style="display: flex;flex-direction: row;flex-wrap: nowrap;align-items: center;justify-content: flex-start;position: relative;width: 50%;overflow: hidden;padding: 10px 10px 10px 20px;">
+                                    <i class="fa fa-calendar"></i>
+                                    <div id="return-date-holder" class="rent-date-text-holder" style="display: block; font-size: 12px;font-weight: 700; white-space: normal; line-height: 15px;
+                                    text-transform: uppercase; padding-right: 20px; padding-left: 5px; z-index: 0;">
+                                        Return Date</div>
+                                </div>
+                            </div>
+                            <input type="text" value=" - " name="dt-holder" class="stm-date-timepicker-holder" style="background-color: transparent !important; border: none; padding-left: 30px; padding-right: 10px; 
+                            position: relative; z-index: 3; color: transparent;" />
+                            <input type="hidden" value="" class="stm-date-timepicker-start" name="pickup_date"
+                                required="" readonly="">
+                            <input type="hidden" class="stm-date-timepicker-end" name="return_date" value="" required=""
+                                readonly="">
+                        </div>
+                        <!-- <div class="second-cols-main comman-cols">
+                            <img src="assets/images/calendar.png" width="15px" />
+                            04/25/2024 <br />
+                            15:57
+                        </div>
+                        <div class="second-cols-main comman-cols">
+                            <img src="assets/images/calendar.png" width="15px" />
+                            04/25/2024 <br />
+                            15:57
+                        </div> -->
+                        <div class="search-btn">
+                            <img src="assets/images/search.png" width="15px" />
+                        </div>
+                    </div>
+                    <div class="below-row">
+                        <div class="check-box-main">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1">Deliver at different point</label>
+                        </div>
+                        <div class="clear-data">
+                            <a href="#">Clear Data</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="stm-mcr-special-prod-wrap">
+                    <div class="price-wrap">
+                        <span>Start from</span>
+                        <div class="stm-mcr-price-view"><span class="currency">$</span><span class="price-big">0</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>BMW 530i</h4>
+                        <ul>
+                            <li>
+                                <div class="attr-ico">
+                                    <img src="assets/images/mcr-fuel-type.svg">
+                                </div>
+                                <span class="value">
+                                    <p>Gasoline</p>
+                                </span>
+                            </li>
+                            <li>
+                                <div class="attr-ico">
+                                    <img src="assets/images/mcr-gear-type.svg">
+                                </div>
+                                <span class="value">
+                                    <p>Automatic</p>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-img">
+                        <img src="assets/images/mcr-bmw-5.png">
+                    </div>
+                </div>
+                <div class="btn-wrap d-none">
+                    <a href="#">
+                        <div class="btn-title">Rent Now</div>
+                        <div class="product-title">BMW 530i</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        dlsdls
+    </section>
+
+
+
+    <!-- jQuery -->
+    <!-- <script src="assets/js/jquery-3.6.0.min.js"></script> -->
+    <!-- BOOTSTRAP JS -->
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <!-- SCRIPT JS -->
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+
+    <script>
+        $(function () {
+            // $('input[name="datetimes"]').daterangepicker({
+            //     timePicker: true,
+            //     startDate: moment().startOf('hour'),
+            //     endDate: moment().startOf('hour').add(32, 'hour'),
+            //     locale: {
+            //         format: 'M/DD hh:mm A'
+            //     }
+            // });
+        });
+
+
+    </script>
+
+    <script>
+        $(".slick-slider").slick({
+            draggable: true,
+            autoplay: true,
+            autoplaySpeed: 7000,
+            arrows: false,
+            dots: false,
+            fade: true,
+            speed: 500,
+            infinite: true,
+            cssEase: 'ease-in-out',
+            touchThreshold: 100
+        });
+    </script>
+
+    <script type="text/javascript" id="jquery_cookie-js-extra">
+        /* <![CDATA[ */
+        var datepickervars = { "apply": "Apply", "cancel": "Cancel" };
+    /* ]]> */
+    </script>
+    <script>
+        (function ($) {
+            "use strict";
+
+            $(document).ready(function () {
+
+
+                $('.stm_date_time_input input').on('change', function () {
+                    if ($(this).val() == '') {
+                        $(this).removeClass('active');
+                    } else {
+                        $(this).addClass('active');
+                    }
+                });
+
+
+                /*Timepicker*/
+                var stmToday = new Date();
+                var stmTomorrow = new Date(+new Date() + 86400000);
+                moment.locale('en');
+                var minDate = new Date();
+                var startDate = false;
+                var endDate = false;
+                var dateTimeFormat = 'MM/DD/Y H:mm';
+                var wpTimeFormat = 'H:i';
+                var dateTimeFormatHide = 'MM DD, YYYY HH:mm';
+                var datepicker_holder = $('.stm-date-timepicker-holder');
+
+                datepicker_holder.daterangepicker({
+                    minDate: minDate,
+                    minHour: 9,
+                    maxHour: 18,
+                    startDate: stmToday,
+                    endDate: stmTomorrow,
+                    timePicker: true,
+                    timePicker24Hour: true,
+                    timePickerIncrement: 30,
+                    autoApply: true,
+                    locale: {
+                        format: dateTimeFormat,
+                        firstDay: 1
+                    },
+                    opens: 'center'
+                });
+
+                datepicker_holder.on('show.daterangepicker', function (ev, picker) {
+                    $('body').addClass('stm_background_overlay stm-lock');
+                })
+
+                datepicker_holder.on('hide.daterangepicker', function (ev, picker) {
+
+                    startDate = picker.startDate.format(dateTimeFormatHide);
+                    endDate = picker.endDate.format(dateTimeFormatHide);
+
+                    $('.stm-date-timepicker-start').attr('data-dt-hide', picker.startDate.format(startDate));
+
+                    $('.stm-date-timepicker-end').attr('data-dt-hide', picker.endDate.format(endDate));
+
+                    if (dateTimeFormat.startsWith('F j, Y')) {
+                        wpTimeFormat = wpTimeFormat.replace(/g/g, 'h').replace(/i/g, 'mm');
+                        $('.stm-date-timepicker-start').val(picker.startDate.format('MMMM D, YYYY' + ' ' + wpTimeFormat));
+                        $('#pickup-date-holder').text(picker.startDate.format('MMMM D, YYYY' + ' ' + wpTimeFormat));
+                        $('.stm-date-timepicker-end').val(picker.endDate.format('MMMM D, YYYY' + ' ' + wpTimeFormat));
+                        $('#return-date-holder').text(picker.endDate.format('MMMM D, YYYY' + ' ' + wpTimeFormat));
+                    } else {
+                        $('.stm-date-timepicker-start').val(picker.startDate.format(dateTimeFormat));
+                        $('#pickup-date-holder').text(picker.startDate.format(dateTimeFormat));
+
+                        $('.stm-date-timepicker-end').val(picker.endDate.format(dateTimeFormat));
+                        $('#return-date-holder').text(picker.endDate.format(dateTimeFormat));
+
+                    }
+
+                })
+
+            });
+
+        })(jQuery);
+    </script>
+</body>
+
+</html>
